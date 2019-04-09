@@ -13,3 +13,10 @@ body {
 #page-footer{
     background-color: #000;
 }
+#button {
+  background-color: #0a0;
+}
+
+.parallax-container {
+  height: 900px;
+}
