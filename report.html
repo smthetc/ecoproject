@@ -2,82 +2,98 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Document</title>
+  <title>Document</title>
 </head>
 
 <body>
-    <header>
-       
-          <nav id="menu">
-            <div class="nav-wrapper">
-              <a href="#!" class="brand-logo"><img src="img/logo.png" width="75px" height="75px" alt=""></a>
-              <a href="index.html" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-              <ul class="right hide-on-med-and-down">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="content.html">Информация</a></li>
-                <li><a href="list.html">Уровень загрязнения</a></li>
-                <li><a href="list2.html">Решения</a></li>
-                <li><a href="report.html">Контакты</a></li>
-              </ul>
-            </div>
-          </nav>
-        
-          <ul class="sidenav" id="mobile-demo">
+  <header>
+    <div class="navbar-fixed">
+      <nav id="menu">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo"><img src="img/logo.png" width="75px" height="75px" alt=""></a>
+          <a href="index.html" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
             <li><a href="index.html">Главная</a></li>
-                <li><a href="content.html">Информация</a></li>
-                <li><a href="list.html">Уровень загрязнения</a></li>
-                <li><a href="list2.html">Решения</a></li>
-                <li><a href="report.html">Отзыв</a></li>
+            <li><a href="content.html">Информация</a></li>
+            <li><a href="list.html">Уровень загрязнения</a></li>
+            <li><a href="list2.html">Решения</a></li>
+            <li><a href="report.html">Контакты</a></li>
           </ul>
-
-
-         
-                  
-
-
-
-
-
-    </header>
-    
-
-    
-
-        
-    <footer class="page-footer" id="page-footer">
+        </div>
+      </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="content.html">Информация</a></li>
+      <li><a href="list.html">Уровень загрязнения</a></li>
+      <li><a href="list2.html">Решения</a></li>
+      <li><a href="report.html">Отзыв</a></li>
+    </ul>
+  </header>
+  <div class="parallax-container">
+    <div class="parallax"><img src="img/backofcont.jpeg"></div>
+  </div>
+  <div class="row">
+    <form class="col s12" action="action.php" method="POST" id="ecorep">
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="first_name" id="first_name" type="text" class="validate">
+          <label for="first_name">Имя</label>
+        </div>
+        <div class="input-field col s6">
+          <input name="last_name" id="last_name" type="text" class="validate">
+          <label for="last_name">Фамилия</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea name="report" id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Ваш отзыв</label>
+        </div>
+        <button class="btn waves-effect waves-light" id="button" type="submit" name="action">Отправить
+          <i class="material-icons right">send</i>
+        </button>
+        <div class="g-recaptcha" data-sitekey="6LfKU50UAAAAAE6k9VvyXYgJyh8ene7DPmAgCcdi"></div>
+      </div>
+      <div id="results"></div>
+    </form>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9037.526817516997!2d46.40339284235842!3d55.50829876181627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1554879612869!5m2!1sru!2sru" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+  <footer class="page-footer" id="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Описание</h5>
+          <p class="grey-text text-lighten-4">Наш сайт для пропаганды защиты природы</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Контакты</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">YouTube</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Vkontakte</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Our group</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
       <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Описание</h5>
-            <p class="grey-text text-lighten-4">Наш сайт для пропаганды защиты природы</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Контакты</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">YouTube</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Vkontakte</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Our group</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
         Cпасибо за посещение
-        </div>
       </div>
-    </footer>
-    <script src="jquerry.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="script.js"></script>
+    </div>
+  </footer>
+  <script src="ajax.js"></script>
+  <script src="jquerry.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

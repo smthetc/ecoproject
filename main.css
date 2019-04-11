@@ -13,3 +13,26 @@ body {
 #page-footer{
     background-color: #000;
 }
+#button {
+  background-color: #0a0;
+}
+
+.parallax-container {
+  height: 900px;
+}
+
+
+
+
+
+/* @media screen and (max-width: 601px) {
+
+.row .col.s4 {
+  width: 58.3333%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+
+
+} */
