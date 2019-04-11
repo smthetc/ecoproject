@@ -6,7 +6,7 @@ if(isset($_POST['report'])) $report = $_POST['report'];
 $db_host = "localhost"; 
 $db_user = "root"; // Логин БД
 $db_password = ""; // Пароль БД
-$db_base = 'ecobase'; // Имя БД
+$db_base = 'shumteh_wor4'; // Имя БД
 $db_table = "ecotable"; // Имя Таблицы БД
 $mysqli = new mysqli($db_host,$db_user,$db_password,$db_base);
 if ($mysqli->connect_error) {
